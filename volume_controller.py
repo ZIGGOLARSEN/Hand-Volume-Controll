@@ -6,8 +6,8 @@ import numpy as np
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
-from .hand_detector import HandDetector
-from .video_capture import VideoCapture
+from hand_detector import HandDetector
+from video_capture import VideoCapture
 
 
 class VolumeController:
@@ -81,7 +81,3 @@ class VolumeController:
 
         self.volume.SetMasterVolumeLevel(volume, None)
 
-
-vol_controller = VolumeController()
-
-vol_controller.start()
